@@ -4,25 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аниме код гирос</title>
+    <style>
+        body{
+            background-color: #000000;
+            color: aliceblue;
+        }
+        button{
+            background: #171D23;
+            color: aliceblue;
+            border-radius: 1rem;
+            border-color: #1D252C;
+        }
+        button:hover{
+            background-color: #1D252C;
+        }
+        button:active{
+            background-color: whitesmoke;
+            color: #171D23;
+        }
+        #video{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Первая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3976955" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Вторая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983414" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Третья серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983415" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Четвертая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983417" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Пятая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3985063" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Шестая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987856" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Седьмая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987857" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Восьмая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987858" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <h1>Девятая серия</h1>
-    <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987859" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <button onclick="onseries('1')">
+        <h1>Первая серия</h1>
+    </button>
+    
+    <button onclick="onseries('2')">
+        <h1>Вторая серия</h1>
+    </button>
+    
+    <button onclick="onseries('3')">
+        <h1>Третья серия</h1>
+    </button>
+    
+    <button onclick="onseries('4')">
+        <h1>Четвертая серия</h1>
+    </button>
+    
+    <button onclick="onseries('5')">
+        <h1>Пятая серия серия</h1>
+    </button>
+    
+    <button onclick="onseries('6')">
+        <h1>Шестая серия</h1>
+    </button>
+    
+    <button onclick="onseries('7')">
+        <h1>Седьмая серия</h1>
+    </button>
+    
+    <button onclick="onseries('8')">
+        <h1>Восьмая серия</h1>
+    </button>
+    
+    <button onclick="onseries('9')">
+        <h1>Девятая серия</h1>
+    </button>
+    
+    <button onclick="onseries('10')">
+        <h1>Десятая серия</h1>
+    </button>
+    <div id="video">
+
+    </div>
+    <script>
+        let frames = {
+            '1':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3976955" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '2':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983414" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '3':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983415" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '4':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3983417" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '5':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3985063" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '6':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987856" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '7':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987857" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '8':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987858" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '9':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3987859" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '10':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3988853" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '11':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3988857" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '12':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3988859" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+            '13':'<iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=3988862" frameborder="0" scrolling="no" allowfullscreen></iframe>'
+
+        };
+        function onseries(index) {
+            console.log(frames[index]);
+            document.querySelector('#video').innerHTML = frames[index];
+        }
+    </script>
+
 </body>
 </html>
