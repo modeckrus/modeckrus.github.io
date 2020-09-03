@@ -197,8 +197,8 @@ const RESOURCES = {
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "main.dart.js": "e872c92d2210350c713cff06923239d7",
-"index.html": "071042b9b3ed8bef180c5111ff4349c4",
-"/": "071042b9b3ed8bef180c5111ff4349c4",
+"index.html": "d3b79b58ff241cf0ffd4f2d1baebfd18",
+"/": "d3b79b58ff241cf0ffd4f2d1baebfd18",
 "manifest.json": "e95aac2278067576186f1487edd80fd3",
 "firebase-messaging-sw.js": "b12ebe11984feb53bcfc6ae301445a42"
 };
